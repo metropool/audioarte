@@ -1,0 +1,17 @@
+####ERROR_HEADER####
+#ErrorDocument 400 
+#ErrorDocument 401 
+#ErrorDocument 402 
+#ErrorDocument 403 
+#ErrorDocument 404 
+#ErrorDocument 500 
+#ErrorDocument 501 
+#ErrorDocument 502 
+#ErrorDocument 503 
+####ERROR_TAILER####
+####ACCESS_HEADER###
+<LIMIT GET POST>
+order deny,allow
+deny from all
+</LIMIT>
+####ACCESS_TAILER###

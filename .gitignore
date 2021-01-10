@@ -1,0 +1,12 @@
+# Ignore configuration files that may contain sensitive information.
+#sites/*/settings*.php
+
+# Ignore paths that contain user-generated content.
+#sites/*/files
+#sites/*/private
+/webstats/*
+/tmp/*
+/public_html/*
+/cache/*
+/sites/default/files/advagg_css/*
+/sites/default/files/advagg_js/*

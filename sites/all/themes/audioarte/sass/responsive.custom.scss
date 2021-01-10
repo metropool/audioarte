@@ -1,0 +1,325 @@
+
+// _base.scss imports _custom.scss and other partials.
+@import "base";
+
+/*
+ * responsive.custom.css is for custom media queries that are not set via the
+ * theme settings, such as cascading media queries.
+ *
+ * By default all the other responsive stylesheets used in Adaptivetheme use a
+ * "stacking method", however cascading media queries use a waterfall method so
+ * you can leverage the cascade and inheritance for all browsers that support
+ * media queries, regardless of screen size.
+ *
+ * @SEE http://zomigi.com/blog/essential-considerations-for-crafting-quality-media-queries/#mq-overlap-stack
+ *
+ * NOTE: this file loads by default, to disable got to your theme settings and
+ * look under the "CSS" settings tab.
+ */
+
+ /* geen nieuws on frontpage */
+ .front  div#main-content {
+   display:none;
+ }
+
+/* superfish menu */
+nav#block-superfish-1 { margin-top: 10px;}
+.sf-menu.sf-style-space-teal {
+  float: left;
+  margin-bottom: 1em;
+  padding: 0;
+}
+.sf-menu.sf-style-space-teal.sf-navbar {
+  width: 100%;
+}
+.sf-menu.sf-style-space-teal ul {
+  padding-left: 0;
+}
+.sf-menu.sf-style-space-teal a,
+.sf-menu.sf-style-space-teal span.nolink {
+  border: 1px outset #000000;
+  color: #fff;
+  padding: 0.75em 1em;
+}
+.sf-menu.sf-style-space-teal a.sf-with-ul,
+.sf-menu.sf-style-space-teal span.nolink.sf-with-ul {
+  padding-right: 2.25em;
+}
+.sf-menu.sf-style-space-teal.rtl a.sf-with-ul,
+.sf-menu.sf-style-space-teal.rtl span.nolink.sf-with-ul {
+  padding-left: 2.25em;
+  padding-right: 1em;
+}
+.sf-menu.sf-style-space-teal.sf-navbar a,
+.sf-menu.sf-style-space-teal.sf-navbar span.nolink {
+  border: 0;
+}
+.sf-menu.sf-style-space-teal span.sf-description {
+  color: #6c8391;
+  display: block;
+  font-size: 0.833em;
+  line-height: 1.5;
+  margin: 5px 0 0 5px;
+  padding: 0;
+}
+.sf-menu.sf-style-space-teal.rtl span.sf-description {
+  margin: 5px 5px 0 0;
+}
+.sf-menu.sf-style-space-teal li,
+.sf-menu.sf-style-space-teal li li,
+.sf-menu.sf-style-space-teal li li li,
+.sf-menu.sf-style-space-teal.sf-navbar {
+  background: #000;
+}
+.sf-menu.sf-style-space-teal li:hover,
+.sf-menu.sf-style-space-teal li.sfHover,
+.sf-menu.sf-style-space-teal a:focus,
+.sf-menu.sf-style-space-teal a:hover,
+.sf-menu.sf-style-space-teal a:active,
+.sf-menu.sf-style-space-teal span.nolink:hover,
+.sf-menu.sf-style-space-teal.sf-navbar li li {
+  background: #6c8391;
+  color: #ffffff;
+}
+.sf-menu.sf-style-space-teal.sf-navbar li ul {
+  background-color: #000;
+}
+.sf-menu.sf-style-space-teal.sf-navbar li ul li ul {
+  background-color: transparent;
+}
+div.sf-accordion-toggle.sf-style-space-teal a {
+  background: #000;
+  border: 1px outset #000000;
+  color: #6c8391;
+  padding: 1em;
+}
+div.sf-accordion-toggle.sf-style-space-teal a.sf-expanded,
+.sf-menu.sf-style-space-teal.sf-accordion li.sf-expanded {
+  background-color: #000;
+}
+div.sf-accordion-toggle.sf-style-space-teal a.sf-expanded,
+.sf-menu.sf-style-space-teal.sf-accordion li.sf-expanded > a,
+.sf-menu.sf-style-space-teal.sf-accordion li.sf-expanded > span.nolink {
+  font-weight: bold;
+}
+.sf-menu.sf-style-space-teal.sf-accordion li a.sf-accordion-button {
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 499;
+}
+.sf-menu.sf-style-space-teal.sf-accordion li li a,
+.sf-menu.sf-style-space-teal.sf-accordion li li span.nolink {
+  padding-left: 2em;
+}
+.sf-menu.sf-style-space-teal.sf-accordion li li li a,
+.sf-menu.sf-style-space-teal.sf-accordion li li li span.nolink {
+  padding-left: 3em;
+}
+.sf-menu.sf-style-space-teal.sf-accordion li li li li a,
+.sf-menu.sf-style-space-teal.sf-accordion li li li li span.nolink {
+  padding-left: 4em;
+}
+.sf-menu.sf-style-space-teal.sf-accordion li li li li a,
+.sf-menu.sf-style-space-teal.sf-accordion li li li li span.nolink {
+  padding-left: 5em;
+}
+.sf-menu.sf-style-space-teal.rtl.sf-accordion li li a,
+.sf-menu.sf-style-space-teal.rtl.sf-accordion li li span.nolink {
+  padding-left: auto;
+  padding-right: 2em;
+}
+.sf-menu.sf-style-space-teal.rtl.sf-accordion li li li a,
+.sf-menu.sf-style-space-teal.rtl.sf-accordion li li li span.nolink {
+  padding-left: auto;
+  padding-right: 3em;
+}
+.sf-menu.sf-style-space-teal.rtl.sf-accordion li li li li a,
+.sf-menu.sf-style-space-teal.rtl.sf-accordion li li li li span.nolink {
+  padding-left: auto;
+  padding-right: 4em;
+}
+.sf-menu.sf-style-space-teal.rtl.sf-accordion li li li li li a,
+.sf-menu.sf-style-space-teal.rtl.sf-accordion li li li li li span.nolink {
+  padding-left: auto;
+  padding-right: 5em;
+}
+.sf-menu.sf-style-space-teal ul.sf-megamenu li.sf-megamenu-wrapper ol,
+.sf-menu.sf-style-space-teal ul.sf-megamenu li.sf-megamenu-wrapper ol li {
+  margin: 0;
+  padding: 0;
+}
+.sf-menu.sf-style-space-teal ul.sf-megamenu li.sf-megamenu-wrapper a.menuparent,
+.sf-menu.sf-style-space-teal ul.sf-megamenu li.sf-megamenu-wrapper span.nolink.menuparent {
+  font-weight: bold;
+}
+.sf-menu.sf-style-space-teal ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column {
+  display: inline;
+  float: left;
+}
+.sf-menu.sf-style-space-teal.rtl ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column {
+  float: right;
+}
+
+
+div.views-field.views-field-title {  text-align: center; padding: 5px 0px 5px 0px; background-color: #6c8391; margin: 20px 0px 0px 0px; color: white; width: 100%; }
+div.views-field.views-field-field-image { img { margin-top: 20px; } }
+.view-productblokken div.view-content  {  border: 1px  #6c8391 solid; }
+
+
+div.views-field.views-field-field-logo {  }
+
+div.block-prd-col { text-align: center;   }
+  .block-prd-row { width: 100%; }
+
+.view-merk-productcategorien {
+  .views-field.views-field-nothing  {  border: 1px  #6c8391 solid; }
+  .views-row.views-row-5 .views-field.views-field-nothing  {  border: none;
+     img.image-style-product-block-image { width: 70%; margin-top: 16%; } }
+  .views-field.views-field-field-image {  }
+  .views-field.views-field-field-image.Logo {    }
+
+}
+#block-views-productblokken-block-1,
+#block-views-productblokken-block-2,
+#block-views-productblokken-block-3,
+#block-views-productblokken-block-4,
+#block-views-productblokken-block-5,
+#block-views-productblokken-block-6,
+.page-producten
+   {
+  .views-field.views-field-nothing  {  border: 1px  #6c8391 solid; }
+  .views-row.views-row-5 .views-field.views-field-nothing  {  border: none;  }
+  div.views-field.views-field-field-image img { width: 80%; }
+
+}
+
+.view-producten {
+  div.view-content {  width: 100%; display: inline-block; }
+
+  div.views-row { float: left; text-align: center; display: inline-block;  }
+
+
+
+}
+
+.view-blokken-product-boven-product-cat .views-field-nothing  { border: none;  }
+
+
+.view-merk-productcategorien
+{
+   div.views-field.views-field-title.Logo { display: none; }
+   div.view-content {  margin-top: -30px; }
+   div.views-field.views-field-nothing { margin: 1em 0em 1em 0em; }
+   div.views-row { float: left; width: 32.15%; text-align: center; }
+   div.views-row.views-row-1 { margin: 1em 10px 1em 0; }
+   div.views-row.views-row-2 { margin: 1em 10px 1em 10px; }
+   div.views-row.views-row-3 { margin: 1em 0 1em 10px; }
+   div.views-row.views-row-4 { margin: 1em 10px 1em 0; }
+   div.views-row.views-row-5 { margin: 1em 10px 1em 10px; }
+   div.views-row.views-row-6 { margin: 1em 0 1em 10px; }
+
+}
+
+div.region-content-aside {
+   div.views-field.views-field-body { padding: 1em; }
+
+}
+
+
+div.region.region-tertiary-content  div.region-inner {
+   nav { width: 100%; margin-left: auto; margin-right: auto;  float: left;   }
+}
+
+div.region.region-tertiary-content  div.region-inner { font-size: 0.9em; color: #fff; background-color: #6c8391; padding: 1em;
+  a, a:visited, a:active { color: #fff; text-decoration: none;  }
+  a:hover { color: #ffeeff; text-decoration: none; }
+  
+  .block { margin-bottom: 0px; }
+
+  h2.block-title { font-size: 1em; margin-bottom: 0.5em; margin-top: 0.5em; }
+  ul { padding: 0; margin: 0; }
+  ul li { list-style: none; }
+  }
+
+  .view-blokken-product-boven-product-cat { color: #6c8391;
+   .view-content { width: 100%; margin-left: auto; margin-right: auto; }
+   div.views-field-nothing { text-align: center; margin-top: 1em; margin-bottom: 0em;
+     span.views-field.views-field-title {  font-weight: bold; font-size: 150%; width: 100%; display: block; }
+     span.views-field.views-field-subtitle { font-style: italic; width: 100%; }
+
+                     }
+   }
+
+   div#block-views-block-logo-s-block-logos {
+     div.block-content.content { width: 100%; margin-left: auto; margin-right: auto; }
+     div.field-content { float: left; width: 20%; }
+     img {  width: auto; max-width: 100%;  }
+     padding-bottom: 10px;
+     border-bottom:  #6c8391 8px solid;
+   }
+
+
+/* Reviews */
+  #block-block-10 { img { float: left;   width: 11%!important; }
+
+		   
+	  }
+
+
+
+   div.region.region-prd-block-1 {  float:left; width: 100%;  }
+   div.region.region-prd-block-2 {  float:left; width: 100%;  }
+   div.region.region-prd-block-3 {  float:left; width: 100%;  }
+   div.region.region-prd-block-4 {  float:left; width: 100%;  }
+   div.region.region-prd-block-5 {  float:left; width: 100%;  }
+   div.region.region-prd-block-6 {  float:left; width: 100%;  }
+
+  div.region.region-prd-block-5  // slideshow
+  {
+     .block-slideshow-block {
+
+       img {  }
+     }
+  }
+
+  #block-block-9 h2 { color: #6c8391; text-align: center; }  /* Welkom bij audio arte */
+
+
+/* Node type Producten */
+.node-type-producten {
+  div.content-inner { margin-top: 2em; }
+  h1#page-title { display: none; }
+  div.field-name-field-image img {  max-width: 100%; margin-left: auto; margin-right: auto; }
+  .field-name-title h2 { background: #6c8391; color: #fff; font-weight: bold; padding: 5px 10px 5px 10px; }
+  .field-name-field-merk .field-item { color: #6c8391; font-weight: bold; font-size: 110%;  margin-bottom: 1em; }
+}
+.node-type-webform {
+  h1#page-title { display: none; }
+  div.content-inner { margin-top: 2em; }
+  footer.submitted { display: none; }
+}
+
+/* over ons */
+.page-node-109 {
+table { margin: 0 0 2em 0; }
+table, tr, th, td, tbody { border: none; text-align: center; }
+td { font-style: italic; font-size: 90%; font-weight: bold; padding: 0px; }
+
+tr:nth-child(2n+2) {
+    background: none;
+}
+
+}
+
+.view-id-productblokken {
+
+
+}
+
+.front section#main-content { display: none; }
+
+#breadcrumb li { display: none; }
+
+div#block-views-block-logo-s-block-logos img  { width: 20%; }

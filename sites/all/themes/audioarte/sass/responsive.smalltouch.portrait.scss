@@ -1,0 +1,126 @@
+
+// _base.scss imports _custom.scss and other partials.
+@import "base";
+
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+/* Increase the default font size on small touch devices */
+body {
+  font-size: 100%;
+}
+
+/* =============================================================================
+ *   Mobile Menu Toggle
+ *   See your theme settings extensions for how to enable the menu toggle.
+ *   These are example styles for the menu toggle menu, you can use these in the
+ *   relevant responsive stylesheets as required. Modify to suit your design.
+ * ========================================================================== */
+.at-mt .at-menu-toggle {
+  /* The toggle link */
+  h2 {
+    margin-bottom: 5px;
+
+    a {
+      background: #eee;
+      border: 2px solid #ccc;
+      padding: 2px 10px;
+    }
+  }
+
+  /* Menu items */
+  ul.menu li a {
+    background: #eee;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.region[class*="float-blocks"] .block {
+  float: none;
+  width: 100%;
+}
+
+
+div.region.region-prd-block-1 {   }
+div.region.region-prd-block-2 {   }
+div.region.region-prd-block-3 {   }
+div.region.region-prd-block-4 {  }
+div.region.region-prd-block-5 {    }
+div.region.region-prd-block-6 {   }
+
+div#views_slideshow_cycle_teaser_section_slideshow-block.views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section
+{
+  height: 250px;
+  img { margin-left: auto; margin-right: auto; }
+}
+
+/* over ons */
+.page-node-page-node-109 {
+
+table, tr, th, td { border: none; text-align: center; }
+
+}
+
+  .node-type-webform
+  {
+   input[type='text'] { max-width: 95%; width: 95%;  background-color: #D6DEE2; color: #111; }
+   input[type='email'] { max-width: 95%; width: 95%;  background-color: #D6DEE2; color: #111; }
+   textarea { background-color: #D6DEE2; color: #111; }
+  }
+  .page-node-171 {
+    table, tr, th, td, tbody { border: none; }
+    tr.info, tr.even, tr:nth-child(2n+2) { background: none; }
+  }
+.front section#main-content { display: none; }
+
+.view-producten { margin-top: 1em;
+  div.views-field.views-field-nothing { margin: 1em 1em 10px 1em; }
+  div.views-row.views-row-4   div.views-field.views-field-nothing {  }
+  div.views-row.views-row-5   div.views-field.views-field-nothing { border: 1px  #6c8391 solid; }
+  img { margin-top: 20px; width: 80%; }
+
+  div.view-content { }
+
+  div.views-row { width: 100%; text-align: center; }
+
+}
+
+.page-merk-product-categorie {
+
+}
+
+.view-merk-productcategorien
+{
+   div.views-field.views-field-title.Logo { display: none; }
+   div.view-content {  margin-top: -30px; }
+   div.views-field.views-field-nothing { margin: 1em 1em 1em 1em; }
+   div.views-row {  width: 100%; text-align: center; }
+   div.views-row.views-row-1 { margin: 0em 0em 0em 0em;  }
+   div.views-row.views-row-2 { margin: 0em 0em 0em 0em;   }
+   div.views-row.views-row-3 { margin: 0em 0em 0em 0em; }
+   div.views-row.views-row-4 { margin: 0em 0em 0em 0em;   }
+   div.views-row.views-row-5 { margin: 0em 0em 0em 0em;  }
+   div.views-row.views-row-6 { margin: 0em 0em 0em 0em;   }
+
+}
+div.region-content-aside {
+   div.views-field.views-field-body { padding: 1em; }
+
+}
+
+.page-node #content { padding: 1em;  }
+
+.front div.content-inner { padding: 1em; }
+
+
+div#block-views-block-logo-s-block-logos { div.field-content {  width: 100%; text-align: center; } }
+  #block-block-10 { img { float: left;   width: 33%!important; } }
+  
+  div.region.region-tertiary-content  div.region-inner li { margin-bottom: 0.5em; }

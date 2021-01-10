@@ -1,0 +1,7 @@
+.image-thumbnails .image-thumbnails-preview { height: 230px; }
+.image-thumbnails .image-thumbnails-preview a { float: right; }
+
+.image-thumbnails .item-list ul { margin: 0; }
+.image-thumbnails .item-list ul li { background: none; float: left; list-style-type: none; margin: 0 5px; padding: 0; }
+
+#thumbnails-ajax-preview { height: 100%; text-align: center; }

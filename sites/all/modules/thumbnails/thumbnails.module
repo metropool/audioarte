@@ -1,0 +1,264 @@
+<?php
+
+/**
+ *  @file thumbnails.module
+ * 
+ *  Thumbnails formatter for image field.
+ *
+ * Zmienić nazwę na thumbnails i do publikacji.
+ */
+
+define('THUMBNAILS_MODAL_PATH', 'modal_preview');
+
+/**
+ *  Implementation of hook_theme().
+ */
+function thumbnails_theme() {
+  return array(
+    'thumbnails' => array(
+      'render element' => 'items',
+      'template' => 'thumbnails',
+    ),
+    'thumbnails_ajax_preview' => array(
+      'render element' => 'image',
+    ),
+  );
+}
+
+/**
+ *  Implementation of hook_menu().
+ */
+function thumbnails_menu() {
+  $items[THUMBNAILS_MODAL_PATH . '/%ctools_js'] = array(
+    'page callback' => 'thumbnails_image_view',
+    'page arguments' => array(1, 2, 3),
+    'access arguments' => array('access content'),
+  );
+
+  return $items;
+}
+
+/**
+ *  Implementation of hook_field_formatter_info().
+ */
+function thumbnails_field_formatter_info() {
+  return array(
+    'image_thumbnails_formatter' => array(
+      'label' => t('Thumbnails'),
+      'field types' => array('image'),
+      'settings' => array('thumbnail_style' => '', 'image_style' => '', 'popup_style' => ''),
+      'multiple values' => FIELD_BEHAVIOR_CUSTOM,
+    ),
+  );
+}
+
+/**
+ *  Implementation of hook_field_formatter_settings_form().
+ */
+function thumbnails_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  if ($display['type'] == 'image_thumbnails_formatter') {
+    // Get defined image styles.
+    $image_styles = image_style_options(FALSE);
+    $element['thumbnail_style'] = array(
+      '#title' => t('Thumbnail image style'),
+      '#type' => 'select',
+      '#default_value' => $settings['thumbnail_style'],
+      '#empty_option' => t('None (original image)'),
+      '#options' => $image_styles,
+    );
+    $element['image_style'] = array(
+      '#title' => t('Preview image style'),
+      '#type' => 'select',
+      '#default_value' => $settings['image_style'],
+      '#empty_option' => t('None (original image)'),
+      '#options' => $image_styles,
+    );
+    $element['popup_style'] = array(
+      '#title' => t('Popup image style'),
+      '#type' => 'select',
+      '#default_value' => $settings['popup_style'],
+      '#empty_option' => t('None (original image)'),
+      '#options' => $image_styles,
+    );
+
+    return $element;
+  }
+}
+
+/**
+ *  Implementation of hook_field_formatter_settings_summary().
+ */
+function thumbnails_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  if ($display['type'] == 'image_thumbnails_formatter') {
+    //Get defined image styles.
+    $image_styles = image_style_options(FALSE);
+    $messages = array();
+
+    if (isset($image_styles[$settings['thumbnail_style']])) {
+      $thumbnail_style = $image_styles[$settings['thumbnail_style']];
+    } else {
+      $thumbnail_style = 'None';
+    }
+    if (isset($image_styles[$settings['image_style']])) {
+      $image_style = $image_styles[$settings['image_style']];
+    } else {
+      $image_style = 'None';
+    }
+    if (isset($image_styles[$settings['popup_style']])) {
+      $popup_style = $image_styles[$settings['popup_style']];
+    } else {
+      $popup_style = 'None';
+    }
+    
+    $messages[] = t('Thumbnail style: @style', array('@style' => $thumbnail_style));
+    $messages[] = t('Larger style: @style', array('@style' => $image_style));
+    $messages[] = t('Popup style: @style', array('@style' => $popup_style));
+
+    return implode('<br />', $messages);
+  }
+}
+
+/**
+ *  Implementation of hook_field_formatter_view().
+ */
+function thumbnails_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $settings = $display['settings'];
+
+  if ($display['type'] == 'image_thumbnails_formatter') {
+    $items['#theme'] = 'thumbnails';
+    $items['#settings'] = $settings;
+    $items['#nid'] = $entity->nid;
+    $elements[] = $items;
+    return $elements;
+  }
+}
+
+/**
+ *  Attaches files and javascript settings.
+ */
+function thumbnails_attach($settings) {
+  _load_modal();
+  
+  $settings = array(
+    'image_style' => $settings['image_style'],
+    'popup_style' => $settings['popup_style'],
+    'modal_path' => '/' . THUMBNAILS_MODAL_PATH . '/nojs/**STYLENAME**/**FILENAME**',
+  );
+  drupal_add_js(array('thumbnails' => $settings), 'setting');
+
+  if (module_exists('ctools_ajax_sample')) {
+    $sample_style = array(
+      'ctools-sample-style' => array(
+        'modalSize' => array(
+          'type' => 'scale',
+          'width' => .8,
+          'height' => .8,
+          'addWidth' => 20,
+          'addHeight' => 45,
+        ),
+        'modalOptions' => array(
+          'opacity' => .5,
+          'background-color' => '#000',
+        ),
+        'animation' => 'fadeIn',
+        'modalTheme' => 'CToolsSampleModal',
+        'throbber' => theme('image', array('path' => ctools_image_path('ajax-loader.gif', 'ctools_ajax_sample'), 'alt' => t('Loading...'), 'title' => t('Loading'))),
+      ),
+    );
+    drupal_add_js($sample_style, 'setting');
+
+    ctools_add_js('ctools-ajax-sample', 'ctools_ajax_sample');
+    ctools_add_css('ctools-ajax-sample', 'ctools_ajax_sample');
+  }
+
+  drupal_add_css(drupal_get_path('module', 'thumbnails') . '/thumbnails.css');
+  drupal_add_js(drupal_get_path('module', 'thumbnails') . '/jquery.opacityrollover.js');
+  drupal_add_js(drupal_get_path('module', 'thumbnails') . '/thumbnails.js');
+}
+
+/**
+ *  Menu callback. Displays given image with given style applied in ctools modal.
+ */
+function thumbnails_image_view($js, $style, $filename) {
+  $title = $filename;
+
+  $content = array(
+    '#theme' => 'image_style',
+    '#theme_wrappers' => array('thumbnails_ajax_preview'),
+    '#style_name' => $style,
+    '#path' => file_build_uri($filename),
+  );
+
+  if ($js) {
+    _load_modal();
+    ctools_modal_render($title, $content);
+  }
+  else {
+    drupal_set_title($title);
+    return $output;
+  }
+}
+
+function theme_thumbnails_ajax_preview($variables) {
+  return '<div id="thumbnails-ajax-preview">' . $variables['image']['#children'] . '</div>';
+}
+
+/**
+ *  Sets up variables available in thumbnails.tpl.php
+ */
+function template_preprocess_thumbnails(&$variables) {
+  $items = $variables['items'];
+  $settings = $items['#settings'];
+  $nid = $items['#nid'];
+
+  thumbnails_attach($settings);
+
+  $thumbnails = array();
+  $images = array();
+  foreach ($items as $key => $imagefield_item) {
+    if (drupal_substr($key, 0, 1) == '#')
+      continue;
+
+    $image = theme('image_formatter', array(
+      'item' => $imagefield_item,
+      'image_style' => $settings['thumbnail_style'],
+    ));
+    $path = image_style_url($settings['image_style'], $imagefield_item['uri']);
+
+    $thumbnails[] = l($image, $path, array(
+      'html' => true,
+      'title' => $imagefield_item['title'],
+      'attributes' => array(
+        'class' => array('thumb'),
+        '_target' => 'blanc',
+      ),
+    ));
+  }
+
+  $variables['thumbnails'] = array(
+    '#items' => $thumbnails,
+    '#type' => 'ul',
+    '#attributes' => array(
+      'class' => array('image-thumbnails-thumbnails'),
+    ),
+    '#theme' => 'item_list'
+  );
+
+  $image_path = drupal_get_path('module', 'thumbnails') . '/lupa.png';
+  $variables['popup_link'] = ctools_modal_image_button($image_path, $_GET['q'], t('zoom'), 'ctools-modal-ctools-sample-style');
+}
+
+/**
+ *  Loads ctools modal files.
+ */
+function _load_modal() {
+  ctools_include('ajax');
+  ctools_include('modal');
+  ctools_modal_add_js();
+}

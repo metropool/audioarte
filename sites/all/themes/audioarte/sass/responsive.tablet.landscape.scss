@@ -1,0 +1,97 @@
+
+// _base.scss imports _custom.scss and other partials.
+@import "base";
+
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+
+ .view-merk-productcategorien
+ {
+   div.view-content { width: 100%; margin-left: auto; margin-right: auto; }
+   div.views-row { text-align: center; max-width: 33%; padding: 0px; margin-left: auto; margin-right: auto;  }
+    div.views-field.views-field-title.Logo { display: none; }
+    div.view-content { }
+    div.views-field.views-field-nothing { margin: 1em 1em 1em 1em;   }
+    div.views-row {  width: 50%; text-align: center; }
+    div.views-row.views-row-1 { margin: 0em 0em 0em 0em;  }
+    div.views-row.views-row-2 { margin: 0em 0em 0em 0em;   }
+    div.views-row.views-row-3 { margin: 0em 0em 0em 0em; }
+    div.views-row.views-row-4 { margin: 0em 0em 0em 0em;   }
+    div.views-row.views-row-5 { margin: 0em 0em 0em 0em;  }
+    div.views-row.views-row-6 { margin: 0em 0em 0em 0em;   }
+
+ }
+
+ .view-producten
+ {
+   div.view-content { width: 99.9%; margin-left: auto; margin-right: auto; text-align: center; }
+   div.views-row { float: left; max-width: 31.2%; padding: 10px; margin-left: auto; margin-right: auto;  }
+ }
+ div.region-content-aside {
+    div.views-field.views-field-body { padding: 1em; }
+
+ }
+
+ div.region.region-tertiary-content  div.region-inner {
+    nav { width: 33.3%; margin-left: auto; margin-right: auto;  float: left; min-height: 160px;   }
+ }
+
+ div.block-prd-row { width: 100%; display: inline-block; }
+ div.region.region-prd-block-1 { float:left; float: left; margin: 0 10px 10px 10px;  width: 31.2%; }
+ div.region.region-prd-block-2 { float:left; float: left; margin: 0 10px 10px 0; width: 31.2%; }
+ div.region.region-prd-block-3 { float:left; float: left; margin: 0 10px 10px 10px;  width: 31.2%; }
+ div.region.region-prd-block-4 { float:left; float: left; margin: 0 10px 10px 10px; width: 31.2%; }
+ div.region.region-prd-block-5 { float:left; float: left; margin: 0 10px 10px 0; width: 31.2%; }
+ div.region.region-prd-block-6 { float:left; float: left; margin: 0 0 10px 0;   width: 31.2%; }
+
+ /* Reviews */
+   #block-block-10 {
+      div.block-content.content { margin-left: auto; margin-right: auto; }
+        margin-bottom: 20px;
+   
+  }
+  .node-type-webform
+                                          {
+                                           input[type='text'] { max-width: 95%; width: 95%;  background-color: #D6DEE2; color: #111; }
+                                           input[type='email'] { max-width: 95%; width: 95%;  background-color: #D6DEE2; color: #111; }
+                                           textarea {
+                                             width: 50em;
+                                             height: 8em;
+                                             background-color: #D6DEE2; color: #111;
+                                         }
+                                         .form-item {
+                                           padding: 10px 0 10px 180px;
+                                           position: relative;
+                                         }
+                                         .form-item label {
+                                           left: 0;
+                                           position: absolute;
+                                         }
+
+
+                                         div.form-item.form-type-radio {
+                                           padding: 10px 0 10px 50px; }
+
+
+
+                                          }
+                                          .page-node-171 {
+                                            table, tr, th, td, tbody { border: none; }
+                                            tr.info, tr.even, tr:nth-child(2n+2) { background: none; }
+                                              td:nth-child(2) { text-align: right; }
+                                          }
+.front section#main-content { display: none; }
+.page-node #content { padding: 1em; }
+ul#superfish-1 { font-size: 71.2%; width: 100%; background-color: #000 }
+nav#block-superfish-1 { margin-top: 0px; }
+
+
+div.region.region-tertiary-content  div.region-inner li { margin-bottom: 0.4em; }

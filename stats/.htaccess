@@ -1,0 +1,7 @@
+AuthName "audioarte.ronaldpunt.nl statistics"
+AuthType Basic
+AuthUserFile /home/audioarte/.stats-htpasswd
+require valid-user
+<Files .stats-htpasswd>
+deny from all
+</Files>

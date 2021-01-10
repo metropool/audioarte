@@ -1,0 +1,270 @@
+#artiest_popup div.block-inner {
+  background: #000;
+  background-image: none;
+}
+
+.field-name-field-acts .field-item:after {
+  content: ", ";
+}
+
+.field-name-field-acts .field-item:last-child:after {
+  content: "";
+}
+
+.node-type-producten h2#page-title {
+  display: block;
+  color: #fff;
+  background-color: #6c8391;
+  padding: 10px 10px 10px 10px;
+}
+
+input#edit-captcha-response.form-text.required {
+  margin-left: 80px;
+  max-width: 40%;
+}
+
+.section-merk-product-categorie #page-title {
+  display: none;
+}
+
+.region-header .block {
+  margin-bottom: 0px;
+}
+
+.region-header #block-block-12 p {
+  margin: 0 0 0em;
+}
+
+img {
+  width: auto !important;
+  height: auto !important;
+}
+
+.node-type-producten h1#page-title {
+  display: block;
+  color: #fff;
+  background-color: #6c8391;
+  padding: 10px 10px 10px 10px;
+}
+
+input#edit-captcha-response.form-text.required {
+  margin-left: 80px;
+  max-width: 40%;
+}
+
+.section-merk-product-categorie #page-title {
+  display: none;
+}
+
+.region-header .block {
+  margin-bottom: 0px;
+}
+
+.region-header #block-block-12 p {
+  margin: 0 0 0em;
+}
+
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+nav#block-superfish-1 {
+  background-color: #000;
+  margin-top: 0px;
+}
+
+.view-producten div.views-row.views-row-5 div.views-field.views-field-nothing {
+  border: 1px  #6c8391 solid;
+}
+.view-producten img {
+  margin-top: 20px;
+  width: 80%;
+}
+.view-producten div.views-row {
+  float: left;
+  width: 23.6%;
+  margin: 1em 10px 1em 10px;
+}
+.view-producten div.views-row.views-row-1 {
+  margin: 1em 10px 1em 0px;
+}
+.view-producten div.views-row.views-row-2 {
+  margin: 1em 10px 1em 10px;
+}
+.view-producten div.views-row.views-row-3 {
+  margin: 1em 10px 1em 10px;
+}
+.view-producten div.views-row.views-row-4 {
+  margin: 1em 0px 1em 10px;
+}
+.view-producten div.views-row.views-row-5 {
+  margin: 1em 10px 1em 0px;
+}
+.view-producten div.views-row.views-row-6 {
+  margin: 1em 10px 1em 10px;
+}
+
+div.block-prd-row {
+  width: 100%;
+  display: inline-block;
+}
+
+div.region.region-prd-block-1 {
+  float: left;
+  float: left;
+  margin-right: 1em;
+  width: 32.2%;
+}
+
+div.region.region-prd-block-2 {
+  float: left;
+  float: left;
+  margin-right: 1em;
+  width: 32.2%;
+}
+
+div.region.region-prd-block-3 {
+  float: left;
+  float: left;
+  margin-right: 0;
+  width: 32.2%;
+}
+
+div.region.region-prd-block-4 {
+  float: left;
+  float: left;
+  margin-right: 1em;
+  width: 32.2%;
+}
+
+div.region.region-prd-block-5 {
+  float: left;
+  float: left;
+  margin-right: 1em;
+  width: 32.2%;
+}
+
+div.region.region-prd-block-6 {
+  float: left;
+  float: left;
+  margin-right: 0;
+  width: 32.2%;
+}
+
+div.region.region-tertiary-content div.region-inner nav {
+  width: 13%;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  padding-left: 3em;
+  padding-right: 2em;
+}
+
+div#views_slideshow_cycle_teaser_section_slideshow-block.views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section {
+  height: 250px;
+}
+
+.view-merk-productcategorien div.views-field.views-field-title.Logo {
+  display: none;
+}
+.view-merk-productcategorien div.view-content {
+  margin-top: -60px;
+}
+.view-merk-productcategorien div.views-field.views-field-nothing {
+  margin: 1em 0em 1em 0em;
+}
+.view-merk-productcategorien div.views-row {
+  float: left;
+  width: 32%;
+  text-align: center;
+}
+.view-merk-productcategorien div.views-row.views-row-1 {
+  margin: 1em 10px 1em 0px;
+}
+.view-merk-productcategorien div.views-row.views-row-2 {
+  margin: 1em 10px 1em 10px;
+}
+.view-merk-productcategorien div.views-row.views-row-3 {
+  margin: 1em 0px 1em 10px;
+}
+.view-merk-productcategorien div.views-row.views-row-4 {
+  margin: 1em 10px 1em 0px;
+}
+.view-merk-productcategorien div.views-row.views-row-5 {
+  margin: 1em 10px 1em 10px;
+}
+.view-merk-productcategorien div.views-row.views-row-6 {
+  margin: 1em 0px 1em 10px;
+}
+
+.view-blokken-product-boven-product-cat div.views-field-nothing span.views-field.views-field-title {
+  font-weight: bold;
+  font-size: 150%;
+}
+.view-blokken-product-boven-product-cat div.views-field-nothing span.views-field.views-field-subtitle {
+  font-style: italic;
+  font-size: 100%;
+}
+
+.node-type-webform input:focus {
+  color: #6c8391;
+}
+.node-type-webform input[type='text'] {
+  max-width: 100%;
+  width: 100%;
+  background-color: #D6DEE2;
+  color: #111;
+}
+.node-type-webform input[type='email'] {
+  max-width: 100%;
+  width: 100%;
+  background-color: #D6DEE2;
+  color: #111;
+}
+.node-type-webform textarea {
+  width: 58em;
+  height: 8em;
+  background-color: #D6DEE2;
+  color: #111;
+}
+.node-type-webform .form-item {
+  padding: 10px 0 10px 200px;
+  position: relative;
+}
+.node-type-webform .form-item label {
+  left: 0;
+  position: absolute;
+}
+.node-type-webform div.form-item.form-type-radio {
+  padding: 10px 0 10px 50px;
+}
+
+.page-node-171 {
+  /* contact form */
+}
+.page-node-171 table, .page-node-171 tr, .page-node-171 th, .page-node-171 td, .page-node-171 tbody {
+  border: none;
+}
+.page-node-171 td {
+  padding: 0;
+}
+.page-node-171 tr.info, .page-node-171 tr.even, .page-node-171 tr:nth-child(2n+2) {
+  background: none;
+}
+.page-node-171 td:nth-child(2) {
+  text-align: right;
+}
+
+.front section#main-content {
+  display: none;
+}
+
+div.region.region-tertiary-content div.region-inner li {
+  margin-bottom: 0.1em;
+}
+#footer #block-block-1 div.block-content div { display: inline; }

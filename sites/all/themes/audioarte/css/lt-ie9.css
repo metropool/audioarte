@@ -1,0 +1,76 @@
+#artiest_popup div.block-inner {
+  background: #000;
+  background-image: none;
+}
+
+.field-name-field-acts .field-item:after {
+  content: ", ";
+}
+
+.field-name-field-acts .field-item:last-child:after {
+  content: "";
+}
+
+.node-type-producten h2#page-title {
+  display: block;
+  color: #fff;
+  background-color: #6c8391;
+  padding: 10px 10px 10px 10px;
+}
+
+input#edit-captcha-response.form-text.required {
+  margin-left: 80px;
+  max-width: 40%;
+}
+
+.section-merk-product-categorie #page-title {
+  display: none;
+}
+
+.region-header .block {
+  margin-bottom: 0px;
+}
+
+.region-header #block-block-12 p {
+  margin: 0 0 0em;
+}
+
+img {
+  width: auto !important;
+  height: auto !important;
+}
+
+.node-type-producten h1#page-title {
+  display: block;
+  color: #fff;
+  background-color: #6c8391;
+  padding: 10px 10px 10px 10px;
+}
+
+input#edit-captcha-response.form-text.required {
+  margin-left: 80px;
+  max-width: 40%;
+}
+
+.section-merk-product-categorie #page-title {
+  display: none;
+}
+
+.region-header .block {
+  margin-bottom: 0px;
+}
+
+.region-header #block-block-12 p {
+  margin: 0 0 0em;
+}
+
+/*
+ * Target IE 6, 7 and 8 (less than IE9)
+ */
+/*
+ * Assuming a mobile first approach with respond.js OFF, we must reset the font
+ * size for lt IE9
+ */
+html {
+  font-size: 81.3%;
+}

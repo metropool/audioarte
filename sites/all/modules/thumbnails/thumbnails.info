@@ -1,0 +1,15 @@
+; $Id$
+name = Thumbnails
+description = Image field thumbnails formatter.
+core = 7.x
+package = "Image"
+files[] = thumbnails.module
+
+dependencies[] = image
+dependencies[] = ctools
+; Information added by drupal.org packaging script on 2011-03-31
+version = "7.x-1.0-unstable1"
+core = "7.x"
+project = "thumbnails"
+datestamp = "1301567168"
+

@@ -1,0 +1,245 @@
+#artiest_popup div.block-inner {
+  background: #000;
+  background-image: none;
+}
+
+.field-name-field-acts .field-item:after {
+  content: ", ";
+}
+
+.field-name-field-acts .field-item:last-child:after {
+  content: "";
+}
+
+.node-type-producten h2#page-title {
+  display: block;
+  color: #fff;
+  background-color: #6c8391;
+  padding: 10px 10px 10px 10px;
+}
+
+input#edit-captcha-response.form-text.required {
+  margin-left: 80px;
+  max-width: 40%;
+}
+
+.section-merk-product-categorie #page-title {
+  display: none;
+}
+
+.region-header .block {
+  margin-bottom: 0px;
+}
+
+.region-header #block-block-12 p {
+  margin: 0 0 0em;
+}
+
+img {
+  width: auto !important;
+  height: auto !important;
+}
+
+.node-type-producten h1#page-title {
+  display: block;
+  color: #fff;
+  background-color: #6c8391;
+  padding: 10px 10px 10px 10px;
+}
+
+input#edit-captcha-response.form-text.required {
+  margin-left: 80px;
+  max-width: 40%;
+}
+
+.section-merk-product-categorie #page-title {
+  display: none;
+}
+
+.region-header .block {
+  margin-bottom: 0px;
+}
+
+.region-header #block-block-12 p {
+  margin: 0 0 0em;
+}
+
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+/* Increase the body font size on small touch devices */
+body {
+  font-size: 100%;
+}
+
+/* =============================================================================
+ *   Mobile Menu Toggle
+ *   See your theme settings extensions for how to enable the menu toggle.
+ *   These are example styles for the menu toggle menu, you can use these in the
+ *   relevant responsive stylesheets as required. Modify to suit your design.
+ * ========================================================================== */
+.at-mt .at-menu-toggle {
+  /* The toggle link */
+  /* Menu items */
+}
+.at-mt .at-menu-toggle h2 {
+  margin-bottom: 5px;
+}
+.at-mt .at-menu-toggle h2 a {
+  background: #eee;
+  border: 2px solid #ccc;
+  padding: 2px 10px;
+}
+.at-mt .at-menu-toggle ul.menu li a {
+  background: #eee;
+  border-bottom: 1px solid #fff;
+}
+
+/* custom blocks */
+div#views_slideshow_cycle_teaser_section_slideshow-block.views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section {
+  height: 250px;
+}
+
+div.region.region-tertiary-content div.region-inner nav {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+
+.view-merk-productcategorien div.view-content {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.view-merk-productcategorien div.views-row {
+  text-align: center;
+  max-width: 100%;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.view-merk-productcategorien div.views-field.views-field-title.Logo {
+  display: none;
+}
+.view-merk-productcategorien div.views-field.views-field-nothing {
+  margin: 1em 1em 1em 1em;
+}
+.view-merk-productcategorien div.views-row {
+  width: 100%;
+  text-align: center;
+}
+.view-merk-productcategorien div.views-row.views-row-1 {
+  margin: 0em 0em 0em 0em;
+}
+.view-merk-productcategorien div.views-row.views-row-2 {
+  margin: 0em 0em 0em 0em;
+}
+.view-merk-productcategorien div.views-row.views-row-3 {
+  margin: 0em 0em 0em 0em;
+}
+.view-merk-productcategorien div.views-row.views-row-4 {
+  margin: 0em 0em 0em 0em;
+}
+.view-merk-productcategorien div.views-row.views-row-5 {
+  margin: 0em 0em 0em 0em;
+}
+.view-merk-productcategorien div.views-row.views-row-6 {
+  margin: 0em 0em 0em 0em;
+}
+.view-merk-productcategorien div.views-field-body {
+  padding: 1em;
+}
+
+div.region-content-aside div.views-field.views-field-body {
+  padding: 1em;
+}
+
+.view-producten {
+  margin-top: 1em;
+}
+.view-producten div.views-field.views-field-nothing {
+  margin: 1em 1em 10px 1em;
+}
+.view-producten div.views-row.views-row-5 div.views-field.views-field-nothing {
+  border: 1px  #6c8391 solid;
+}
+.view-producten img {
+  margin-top: 20px;
+  width: 80%;
+}
+.view-producten div.views-row {
+  width: 100%;
+  text-align: center;
+}
+
+.view-blokken-product-boven-product-cat div.views-field-nothing span.views-field.views-field-title {
+  font-weight: bold;
+  font-size: 150%;
+  display: inline;
+}
+.view-blokken-product-boven-product-cat div.views-field-nothing span.views-field.views-field-subtitle {
+  display: inline;
+  font-style: italic;
+  margin-left: 2em;
+}
+
+.node-type-webform input[type='text'] {
+  max-width: 95%;
+  width: 95%;
+  background-color: #D6DEE2;
+  color: #111;
+}
+.node-type-webform input[type='email'] {
+  max-width: 95%;
+  width: 95%;
+  background-color: #D6DEE2;
+  color: #111;
+}
+.node-type-webform textarea {
+  height: 8em;
+  background-color: #D6DEE2;
+  color: #111;
+}
+
+.page-node-171 table, .page-node-171 tr, .page-node-171 th, .page-node-171 td, .page-node-171 tbody {
+  border: none;
+}
+.page-node-171 tr.info, .page-node-171 tr.even, .page-node-171 tr:nth-child(2n+2) {
+  background: none;
+}
+.page-node-171 td:nth-child(2) {
+  text-align: right;
+}
+
+.front section#main-content {
+  display: none;
+}
+
+.page-node #content {
+  padding: 1em;
+}
+
+.front div.content-inner {
+  padding: 1em;
+}
+
+div#block-views-block-logo-s-block-logos div.field-content {
+  width: 100%;
+  text-align: center;
+}
+
+#block-block-10 img {
+  float: left;
+  width: 33% !important;
+}
+
+div.region.region-tertiary-content div.region-inner li {
+  margin-bottom: 0.5em;
+}

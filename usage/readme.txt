@@ -1,0 +1,1 @@
+In deze folder komen de log-files van uw statistieken in te staan.
